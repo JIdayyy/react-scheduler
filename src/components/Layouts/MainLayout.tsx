@@ -1,14 +1,16 @@
-import { Flex } from "@chakra-ui/react";
+import Title from "@components/Title";
 import { ReactNode } from "react";
 
-export default function MainLayout({
-    children,
-}: {
+interface Props {
     children: ReactNode;
-}): JSX.Element {
+}
+
+export default function MainLayout({ children }: Props): JSX.Element {
     return (
-        <Flex w="100vw" h="100vh">
+        <div>
+            <Title title={9} />
+
             {children}
-        </Flex>
+        </div>
     );
 }
